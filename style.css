@@ -1,128 +1,135 @@
-* {
-    margin: 0%;
-    padding: 0;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    box-sizing: border-box;
-}
+* {margin: 0%;
+padding: 0%;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+box-sizing : border-box;
 
-.hero {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: linear-gradient(135deg, #2c003e, #7b2cbf);
 }
+.hero{
+width: 100%;
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+background: linear-gradient(135deg, #2c003e, #7b2cbf);
 
-.hero h1 {
-    font-size: 45px;
-    font-weight: 500;
-    margin-top: -50px;
-    margin-bottom: 50px;
-    color: antiquewhite;
+
 }
-
+.hero h1{
+font-size: 45px;
+font-weight: 500;
+margin-top: -50px;
+margin-bottom: 50px;
+color:antiquewhite;
+}
 .hero h1 span {
-    color: #b78428;
+color:  #b78428;
 }
-
 .hero textarea {
-    width: 1000px;
-    height: 400px;
-    background-color: #2c003e;
-    color: antiquewhite;
-    font-size: 20px;
-    border: 0;
-    outline: 0;
-    padding: 20px;
-    border-radius: 10px;
-    resize: none;
-    margin-bottom: 30px;
-    font-family: monospace;
+width: 1000px;
+height:400px;
+background-color: #2c003e;
+color:antiquewhite;
+font-size: 20px;
+border:0;
+outline: 0;
+padding: 20px;
+border-radius: 10px;
+resize: none;
+margin-bottom: 30px;
+font-family: monospace ;
 }
+textarea ::placeholder{
+font-size: 25px;
+font-family: cursive;
 
-textarea::placeholder {
-    font-size: 25px;
-    font-family: cursive;
 }
-
-.row {
-    width: 600px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.row{
+width: 600px;
+display: flex;
+align-items: center;
+gap: 20px;
 }
-
 button {
-    background: linear-gradient(135deg, #f0c27b, #b78428);
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+background: linear-gradient(135deg, #f0c27b, #b78428); /* Golden gradient */
+color: black; /* White text for contrast */
+border: none;
+padding: 10px 20px;
+font-size: 16px;
+font-weight: bold;
+border-radius: 8px;
+cursor: pointer;
+transition: background 0.3s ease, transform 0.2s ease;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for a 3D effect */
 }
 
 button:hover {
-    background: linear-gradient(135deg, #b78428, #f0c27b);
-    transform: scale(1.05);
+background: linear-gradient(135deg, #b78428, #f0c27b); /* Reverse gradient on hover */
+transform: scale(1.05); /* Subtle zoom effect */
 }
-
 select {
-    flex: 1;
-    color: black;
-    background: linear-gradient(135deg, #b78428, #f0c27b);
-    height: 50px;
-    padding: 0 20px;
-    outline: none;
-    border: none;
-    border-radius: 35px;
-    appearance: none;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    width: 700px;
-    height: 40px;
-    gap: 3rem;
+flex: 1;
+color:black;
+background: linear-gradient(135deg, #b78428, #f0c27b); /* Matches the theme */
+height: 50px;
+padding: 0 20px;
+outline: none;
+border: none;
+border-radius: 35px;
+appearance: none; /* Correct spelling */
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+transition: background-color 0.3s ease, transform 0.2s ease;
+box-shadow: 0 4px 6px  #f0c27b(0, 0, 0, 0.2); /* Optional shadow */
+width: 700px;
+height: 40px;
+gap: 3rem;
 }
 
 option {
-    background: #f0c27b;
-    color: black;
+background:  #f0c27b; /* Dropdown background color */
+color: black; /* Text color */
 }
 
-/* Responsive Design for Small Screens */
 @media (max-width: 325px) {
+    .hero {
+        flex-direction: column; /* Maintain stacking layout for small screens */
+        padding: 10px; /* Reduce padding for very small devices */
+    }
+
     .hero h1 {
-        font-size: 28px; /* Smaller font size for headers */
-        margin-top: 0;
-        margin-bottom: 20px;
+        font-size: 24px; /* Smaller font size for headers */
+        margin-top: -20px; /* Adjust spacing */
+        margin-bottom: 30px; /* Adjust spacing */
     }
 
     .hero textarea {
-        width: 90%; /* Full width for smaller screens */
-        height: 250px; /* Adjust height for better fit */
-        font-size: 16px; /* Smaller font size */
+        width: 100%; /* Full width for small devices */
+        height: 150px; /* Smaller height for limited space */
+        font-size: 14px; /* Reduce font size for better fit */
+        padding: 10px; /* Adjust padding for better fit */
     }
 
     .row {
-        width: 90%; /* Full width for smaller screens */
-        flex-direction: column; /* Stack elements vertically */
-        gap: 10px; /* Reduce gap */
+        width: 100%; /* Full width for the row container */
+        flex-direction: column; /* Stack buttons and select vertically */
+        gap: 10px; /* Reduce gap between elements */
     }
 
     button {
         width: 100%; /* Full width for buttons */
-        padding: 10px; /* Adjust padding */
         font-size: 14px; /* Smaller font size */
+        padding: 8px; /* Adjust padding */
     }
 
     select {
-        width: 100%; /* Full width for dropdown */
+        width: 100%; /* Full width for select dropdown */
         font-size: 14px; /* Smaller font size */
+        padding: 8px; /* Adjust padding for dropdown */
+    }
+
+    option {
+        font-size: 14px; /* Adjust font size inside options */
+    }
+}
